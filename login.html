@@ -2,12 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Udemy Clone</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="login.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css?v=25">
+    <link rel="stylesheet" href="login.css?v=3">
 </head>
 <body>
+
+    <header class="header">
+    <div class="navbar">
+        <div class="navbar__left">
+            <a href="index.html" class="navbar__logo">
+                <img src="./images/logo-udemy.svg" width="91" height="34" alt="Udemy">
+            </a>
+            <a href="#" class="navbar__link">Explore</a>
+            <a href="#" class="navbar__link">Subscribe</a>
+        </div>
+
+        <div class="navbar__search">
+            <span class="fa-solid fa-magnifying-glass"></span>
+            <input type="text" placeholder ="Search for anything">
+        </div>
+
+        <div class="navbar__right">
+            <a href="#" class="navbar__link">Udemy Business</a>
+            <a href="#" class="navbar__link">Teach on Udemy</a>
+            <a href="#" class="navbar__cart"><span class="fa-solid fa-cart-shopping"></span></a>
+            <a href="login.html">
+                <button class="navbar__login">Log in</button>
+            </a>
+            <a href="signup.html">
+            <button class="navbar__signup">Sign up</button>
+            </a>
+            <button type="button" class="navbar__lang" id="langOpen">
+                <i class="fa-solid fa-globe"></i>
+            </button>
+        </div>
+    </div>
+    </header>
 
     <div class="login">
 
@@ -33,12 +67,113 @@
             </div>
 
             <div class="login__box">
-                <p>Don't have an account? <a href="#">Sign up</a></p>
+                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
                 <p><a href="#">Log in with your organization</a></p>
             </div>
         </div>
 
     </div>
+
+    <div class="footer">
+        <div class="footer__one">
+            <div class="footer_one_s1">
+                <p class="footer__title">About</p>
+                <p>About us</p>
+                <p>Careers</p>
+                <p>Contact us</p>
+                <p>Blog</p>
+                <p>Investors</p>
+                <p>Find more on Coursera</p>
+            </div>
+            <div class="footer_one_s2">
+                <p class="footer__title">Discover Udemy</p>
+                <p>Get the app</p>
+                <p>Teach on Udemy</p>
+                <p>Plans and Pricing</p>
+                <p>Affiliate</p>
+                <p>Help and Support</p>
+            </div>
+            <div class="footer_one_s3">
+                <p class="footer__title">Udemy for Business</p>
+                <p>Udemy Business</p>
+            </div>
+            <div class="footer_one_s4">
+                <p class="footer__title">Legal & Accessibility</p>
+                <p>Accessibility statement</p>
+                <p>Privacy policy</p>
+                <p>Sitemap</p>
+                <p>Terms</p>
+            </div>
+        </div>
+
+        <div class="footer__two">
+            <div class="footer__two__left">
+                <a href="index.html" class="footer__logo" title="Home">
+                    <img src="./images/logo-udemy-white.svg" width="91" height="34" alt="Udemy">
+                </a>
+                <p class="footer__copy">&copy; 2026 Udemy, Inc.</p>
+            </div>
+            <div class="footer__two__right">
+                <p>Cookie settings</p>
+                <button type="button" class="footer__two__lang" id="langOpenFooter">
+                    <span class="fa-solid fa-globe"></span>
+                    <p>English</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="lang-modal" id="langModal">
+        <div class="lang-modal__box">
+            <div class="lang-modal__header">
+                <h2>Choose a language</h2>
+                <button type="button" class="lang-modal__close" id="langClose">&times;</button>
+            </div>
+            <div class="lang-modal__list">
+                <button type="button" class="lang-modal__item is-active">English</button>
+                <button type="button" class="lang-modal__item">العربية</button>
+                <button type="button" class="lang-modal__item">Deutsch</button>
+                <button type="button" class="lang-modal__item">Español</button>
+                <button type="button" class="lang-modal__item">Français</button>
+                <button type="button" class="lang-modal__item">Bahasa Indonesia</button>
+                <button type="button" class="lang-modal__item">Italiano</button>
+                <button type="button" class="lang-modal__item">日本語</button>
+                <button type="button" class="lang-modal__item">한국어</button>
+                <button type="button" class="lang-modal__item">Nederlands</button>
+                <button type="button" class="lang-modal__item">Polski</button>
+                <button type="button" class="lang-modal__item">Português</button>
+                <button type="button" class="lang-modal__item">Română</button>
+                <button type="button" class="lang-modal__item">Русский</button>
+                <button type="button" class="lang-modal__item">ภาษาไทย</button>
+                <button type="button" class="lang-modal__item">Türkçe</button>
+                <button type="button" class="lang-modal__item">Tiếng Việt</button>
+                <button type="button" class="lang-modal__item">中文(简体)</button>
+                <button type="button" class="lang-modal__item">中文(繁體)</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var langModal = document.getElementById("langModal");
+
+        function openLangModal() {
+            langModal.classList.add("is-open");
+        }
+
+        function closeLangModal() {
+            langModal.classList.remove("is-open");
+        }
+
+        document.getElementById("langOpen").addEventListener("click", openLangModal);
+        document.getElementById("langOpenFooter").addEventListener("click", openLangModal);
+        document.getElementById("langClose").addEventListener("click", closeLangModal);
+
+        langModal.addEventListener("click", function (event) {
+            if (event.target === langModal) {
+                closeLangModal();
+            }
+        });
+    </script>
 
 </body>
 </html>

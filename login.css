@@ -4,7 +4,6 @@
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: #ffffff;
 }
 
@@ -22,6 +21,8 @@ body {
     justify-content: center;
     gap: 80px;
     padding: 40px;
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .login__left {
@@ -32,6 +33,16 @@ body {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.login__social img {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+.footer__logo {
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .login__right {
